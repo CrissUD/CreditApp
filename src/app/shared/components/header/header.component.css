@@ -1,0 +1,27 @@
+header,
+.logo,
+header ul,
+.header__menu {
+  display: flex;
+}
+
+header,
+header a {
+  color: #fff;
+}
+
+header {
+  background: #072146;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
+  font-family: "Lato", sans-serif;
+}
+
+header ul li {
+  margin: auto 15px;
+}
+
+header a {
+  font-size: 1.2rem;
+}

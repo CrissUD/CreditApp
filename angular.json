@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "CreditApp"
+    }
+  },
+  "defaultProject": "CreditApp",
+  "cli": {
+    "analytics": "3d283a9e-39bf-4a57-97ee-c1bbe718a131"
+  }
 }
