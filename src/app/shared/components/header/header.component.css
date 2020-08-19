@@ -1,8 +1,8 @@
 header,
-.logo,
 header ul,
 .header__menu {
   display: flex;
+  align-items: center;
 }
 
 header,
@@ -13,7 +13,6 @@ header a {
 header {
   background: #072146;
   justify-content: space-between;
-  align-items: center;
   padding: 10px 25px;
   font-family: "Lato", sans-serif;
 }
@@ -23,5 +22,25 @@ header ul li {
 }
 
 header a {
-  font-size: 1.2rem;
+  font-size: 1rem;
+}
+
+header a:hover {
+  text-shadow: 0px 0px 8px #fff;
+}
+
+.header__menu button{
+  margin: auto 15px;
+  padding: 15px;
+  background: #1D73B2;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.header__menu button:hover{
+  transform: scale(1.05);
 }
