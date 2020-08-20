@@ -1,1 +1,8 @@
-<p>register works!</p>
+<form [formGroup]="form" (ngSubmit)="createClient($event)">
+    <input type="text" placeholder="Cedula" formControlName="id">
+    <input type="text" placeholder="Nombre" formControlName="name">
+    <input type="text" placeholder="Apellidos" formControlName="lastName">
+    <input type="text" placeholder="Correo electronico" formControlName="email">
+    <input type="text" placeholder="Telefono" formControlName="contact">
+    <button type="submit">Registrar</button>
+</form>
