@@ -16,14 +16,12 @@
 }
 
 .banner__cover {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
     position: absolute;
     width: 100%;
     height: inherit;
-    background: rgba(0, 0, 0, .6);
-    z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .banner__cover-content {
