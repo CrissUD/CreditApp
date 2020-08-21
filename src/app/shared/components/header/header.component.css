@@ -14,12 +14,13 @@ header a {
 
 header {
   position: fixed;
+  box-sizing: border-box;
   top: 0%;
   left: 0;
-  width: 97%;
+  width: 100%;
   background: #072146;
   justify-content: space-between;
-  padding: 10px 25px;
+  padding: 10px 1.4rem;
   font-family: "Lato", sans-serif;
   z-index: 100;
 }
@@ -49,8 +50,8 @@ header li:hover a{
 }
 
 .header__menu button {
-  margin: auto 15px;
-  padding: 15px;
+  margin: auto 1rem;
+  padding: 1rem;
   background: #1D73B2;
   color: #fff;
   border: none;
@@ -62,18 +63,15 @@ header li:hover a{
   display: none;
   padding: 10px;
   position: fixed;
-  top: 120px;
-  right: 20px;
+  top: 93px;
+  right: 7px;
   border-radius: 100%;
   background: #0079FC;
   cursor: pointer;
   z-index: 100;
 }
-.menu-btn figure{
-  height: 30px;
-}
-.menu-btn img{
-  width: 30px;
+.menu-btn figure, .menu-btn img{
+  height: 2rem;
 }
 
 @media (max-width: 910px) {
@@ -103,5 +101,11 @@ header li:hover a{
   }
   nav ul li:hover {
     background: #0079FC;
+  }
+}
+
+@media (max-width: 430px) {
+  .logo-header h1 {
+    display: none;
   }
 }

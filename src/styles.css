@@ -52,6 +52,12 @@ button {
   height: 70px;
 }
 
+@media (max-width: 1025px) {
+  html, body {
+    font-size: 15px;
+  }
+}
+
 @media (max-width: 790px) {
   html, body {
     font-size: 14px;
@@ -60,11 +66,17 @@ button {
 
 @media (max-width: 480px) {
   html, body {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 
 @media (max-width: 375px) {
+  html, body {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 320px) {
   html, body {
     font-size: 11px;
   }

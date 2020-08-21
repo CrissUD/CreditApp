@@ -1,8 +1,7 @@
 .banner {
     display: block;
-    position: relative;
     top: 90px;
-    height: 400px;
+    height: 600px;
     margin: 0;
 }
 
@@ -14,7 +13,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* filter: blur(2px); */
 }
 
 .banner__cover {
@@ -23,22 +21,26 @@
     align-items: center;
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: inherit;
     background: rgba(0, 0, 0, .6);
     z-index: 10;
 }
 
 .banner__cover-content {
-    max-width: 35%;
-    margin-right: 80px;
-    padding: 10px 30px;
+    max-width: 40%;
+    margin-right: 4rem;
+    padding: 10px 1.9rem;
     text-align: center;
     color: #fff;
     font-family: "Lato", sans-serif;
 }
 
+.banner__cover-content h2 {
+    font-size: 1.5rem;
+}
+
 .banner__cover-content p {
-    font-size: 12px;
+    font-size: 0.9rem;
 }
 
 .banner__cover-content button {
@@ -47,4 +49,17 @@
     color: #fff;
     border: none;
     border-radius: 25px;
+}
+
+@media (max-width: 1024px) {
+    .banner__cover-content {
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 790px) {
+    .banner__cover-content {
+        max-width: 100%;
+        margin-right: 0;
+    }
 }
