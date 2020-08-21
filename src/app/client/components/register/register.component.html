@@ -1,8 +1,14 @@
-<form [formGroup]="form" (ngSubmit)="createClient($event)">
+<form [formGroup]="formClient" (ngSubmit)="createClient($event)">
     <input type="text" placeholder="Cedula" formControlName="id">
     <input type="text" placeholder="Nombre" formControlName="name">
     <input type="text" placeholder="Apellidos" formControlName="lastName">
     <input type="text" placeholder="Correo electronico" formControlName="email">
-    <input type="text" placeholder="Telefono" formControlName="contact">
+    <input type="text" placeholder="Telefono" formControlName="phone">
+
+    <form [formGroup]="formCredit">
+        <input type="text" placeholder="Referencia de pago" formControlName="reference">
+        <input type="number" placeholder="Valor del crédito" formControlName="price">
+        <input type="date" placeholder="Fecha a pagar" formControlName="date">
+    </form>
     <button type="submit">Registrar</button>
 </form>
