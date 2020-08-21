@@ -1,10 +1,10 @@
 import { Credit } from './credit.model';
 
 export interface Client {
-  cedula: number;
-  nombre: string;
-  apellidos: string;
-  correo: string;
-  telefono: number;
+  id: string;
+  name: string;
+  lastName: string;
+  email: string;
+  phone: string;
   //   creditos: Credit[];
 }

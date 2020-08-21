@@ -1,7 +1,7 @@
 export interface Credit {
-  id: number;
-  valor: number;
-  estado: string;
-  fechaPago: string;
-  pagado: boolean;
+  reference: string;
+  price: number;
+  date: string;
+  accepted: boolean;
+  payed: boolean;
 }
