@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
 body {
@@ -11,7 +11,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 figure {
   margin: 0;
@@ -26,16 +26,46 @@ a {
   text-decoration: none;
 }
 
+button {
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.b-size:hover{
+  transform: scale(1.05);
+}
+
+
 .logo {
   display: flex;
   align-items: center;
 }
 .logo h1{
   color: #fff;
+  font-size: 1.8rem;
   margin: 0;
   text-transform: uppercase;
 }
 .logo img{
   width: 70px;
   height: 70px;
+}
+
+@media (max-width: 790px) {
+  html, body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  html, body {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  html, body {
+    font-size: 11px;
+  }
 }

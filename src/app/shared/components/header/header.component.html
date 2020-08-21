@@ -3,7 +3,7 @@
         <img src="../../../../assets/images/logo.png"/>
         <h1>Credit App</h1>
     </div>
-    <nav>
+    <nav #menu>
         <ul>
             <li><a href="#">Inicio</a></li>
             <li><a href="#">Términos</a></li>
@@ -12,7 +12,12 @@
         </ul>
     </nav>
     <div class="header__menu">
-        <button>Iniciar Sesión</button>
-        <button>Registro</button>
+        <button class="b-size">Iniciar Sesión</button>
+        <button class="b-size">Registro</button>
     </div>
 </header>
+<div class="menu-btn">
+    <a (click)="moveMenu(menu)">
+        <figure><img src="https://i.imgur.com/l3VLoZG.png" alt="menu"></figure>
+    </a>
+</div>

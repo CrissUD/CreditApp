@@ -12,9 +12,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  moveMenu(event, gridMenu, logoDiv){
-    gridMenu.classList.toggle('activate');
-    logoDiv.classList.toggle('activate');
+  moveMenu(menu){
+    menu.classList.toggle('active');
   }
 
 }
