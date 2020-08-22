@@ -11,7 +11,9 @@ export class ClientService {
 
   constructor(private http: HttpClient) {}
 
-  getAllClients() {}
+  getAllClients() {
+    return this.http.get<Client[]>(`${this.URL}/clients.json`);
+  }
 
   getClient() {}
 

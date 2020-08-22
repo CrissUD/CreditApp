@@ -6,11 +6,6 @@ import { ClientEditComponent } from './components/client-edit/client-edit.compon
 import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   redirectTo: '/client',
-  //   pathMatch: 'full',
-  // },
   {
     path: '',
     component: ClientListComponent,

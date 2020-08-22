@@ -1,1 +1,7 @@
-<h3>Lista de clientes</h3>
+<div class="margin-general">
+    <h3>Lista de clientes</h3>
+
+    <div>
+        <app-client *ngFor="let client of clients" [client]="client"></app-client>
+    </div>
+</div>

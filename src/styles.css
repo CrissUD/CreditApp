@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
 body {
@@ -11,7 +11,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 figure {
   margin: 0;
@@ -32,7 +32,7 @@ button {
   transition: all 0.2s ease-in;
 }
 
-.b-size:hover{
+.b-size:hover {
   transform: scale(1.05);
 }
 
@@ -40,52 +40,61 @@ button {
   display: flex;
   align-items: center;
 }
-.logo h1{
+.logo h1 {
   color: #fff;
   font-size: 1.8rem;
   margin: 0;
   text-transform: uppercase;
 }
-.logo img{
+.logo img {
   width: 70px;
   height: 70px;
   margin-right: 15px;
 }
 
 .cover {
-    position: absolute;
-    width: 100%;
-    height: inherit;
-    background: rgba(0, 0, 0, .4);
-    z-index: 10;
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.margin-general {
+  margin-top: 120px;
 }
 
 @media (max-width: 1025px) {
-  html, body {
+  html,
+  body {
     font-size: 15px;
   }
 }
 
 @media (max-width: 790px) {
-  html, body {
+  html,
+  body {
     font-size: 14px;
   }
 }
 
 @media (max-width: 480px) {
-  html, body {
+  html,
+  body {
     font-size: 13px;
   }
 }
 
 @media (max-width: 375px) {
-  html, body {
+  html,
+  body {
     font-size: 12px;
   }
 }
 
 @media (max-width: 320px) {
-  html, body {
+  html,
+  body {
     font-size: 11px;
   }
 }
