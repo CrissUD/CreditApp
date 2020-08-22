@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { ClientService } from './../../../core/services/client/client.service';
 import { CreditService } from './../../../core/services/credit/credit.service';
@@ -17,7 +18,8 @@ export class RegisterComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private clientService: ClientService,
-    private creditService: CreditService
+    private creditService: CreditService,
+    private router: Router
   ) {
     this.buildFormClient();
     this.buildFormCredit();
@@ -53,6 +55,7 @@ export class RegisterComponent implements OnInit {
       console.log(newKey);
       this.creditService.createCredit(newKey, credit).subscribe((newCredit) => {
         alert('Se creo el cliente con su credito nuevo');
+        this.router.navigate(['./client']);
       });
     });
   }

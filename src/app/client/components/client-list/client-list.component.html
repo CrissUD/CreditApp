@@ -1,6 +1,6 @@
 <div class="margin-general">
     <h3>Lista de clientes</h3>
-
+    <button routerLink="/client/register">Agregar nuevo</button>
     <div>
         <app-client *ngFor="let client of clients" [client]="client"></app-client>
     </div>

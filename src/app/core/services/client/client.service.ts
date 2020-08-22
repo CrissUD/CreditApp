@@ -15,11 +15,15 @@ export class ClientService {
     return this.http.get<Client[]>(`${this.URL}/clients.json`);
   }
 
-  getClient() {}
+  getClient(key: string) {
+    return this.http.get<Client>(`${this.URL}/clients/${key}.json`);
+  }
 
   createClient(client: Client) {
     return this.http.post(`${this.URL}clients.json`, client);
   }
 
-  updateClient() {}
+  updateClient(key: string, client: Client) {
+    return this.http.put(`${this.URL}clients/${key}.json`, client);
+  }
 }

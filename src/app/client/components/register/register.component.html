@@ -11,6 +11,6 @@
             <input type="number" placeholder="Valor del crédito" formControlName="price">
             <input type="date" placeholder="Fecha a pagar" formControlName="date">
         </form>
-        <button type="submit">Registrar</button>
+        <button [disabled]="formClient.invalid && formCredit.invalid" type="submit">Registrar</button>
     </form>
 </div>

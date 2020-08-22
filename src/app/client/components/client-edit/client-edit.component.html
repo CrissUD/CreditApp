@@ -1,1 +1,10 @@
-<p>client-edit works!</p>
+<div class="margin-general">
+    <form [formGroup]="form" (ngSubmit)="updateClient($event)">
+        <input type="text" placeholder="Cedula" formControlName="id">
+        <input type="text" placeholder="Nombre" formControlName="name">
+        <input type="text" placeholder="Apellidos" formControlName="lastName">
+        <input type="text" placeholder="Correo electronico" formControlName="email">
+        <input type="text" placeholder="Telefono" formControlName="phone">
+        <button [disabled]="form.invalid" type="submit">Actualizar</button>
+    </form>
+</div>
