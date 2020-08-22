@@ -48,6 +48,11 @@ p{
     background: #1D73B2;
     padding: 10px;
     border-radius: 8px;
+    cursor: pointer;
+}
+
+.img_content_feat img:hover {
+    box-shadow: 0px 0px 8px #1D73B2;
 }
 
 .feature__description{
