@@ -1,0 +1,57 @@
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.front__description, .front__image{
+    width: 47%;
+}
+
+.front__description{
+    text-align: justify;
+    vertical-align:top;
+    padding: 70px 50px;
+}
+
+.front__description h2{
+    margin-bottom: 50px;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #1D73B2;
+}
+
+.front__description p{
+    color: #7b7b7b;
+    font-family: "Lato", sans-serif;
+}
+
+.lead{
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.front__image{
+    padding-top: 50px;
+    align-self: flex-end;
+}
+
+.front__image img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 910px) {
+    .front__description {
+        width: 90%;
+    }
+    .front__image{
+        display: none;
+    }
+    .front__description h2{
+        text-align: center;
+    }
+}

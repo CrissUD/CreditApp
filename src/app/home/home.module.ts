@@ -8,6 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { ClientQueryComponent } from './components/client-query/client-query.component';
 import { FeaturesComponent } from './components/features/features.component';
+import { FrontComponent } from './components/front/front.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FeaturesComponent } from './components/features/features.component';
     BannerComponent,
     ClientQueryComponent,
     FeaturesComponent,
+    FrontComponent,
   ],
-  imports: [CommonModule, HomeRoutingModule, RouterModule],
+  imports: [CommonModule, HomeRoutingModule],
 })
 export class HomeModule {}
