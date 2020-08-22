@@ -19,7 +19,9 @@ export class ClientListComponent implements OnInit {
   fetchClients() {
     this.clientService.getAllClients().subscribe((cli) => {
       this.clients = Object.keys(cli).map((key) => {
-        return cli[key];
+        let client: Client = cli[key];
+        client.key = key;
+        return client;
       });
       console.log(this.clients);
     });
