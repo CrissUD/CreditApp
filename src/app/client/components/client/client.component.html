@@ -1,6 +1,10 @@
-<h3>{{ client.name }}</h3>
-<h3>{{ client.lastName }}</h3>
-<p>{{ client.id }}</p>
-<button [routerLink]="['/client', client.key]">Actualizar datos</button>
-<button [routerLink]="[]">Ver creditos</button>
-<br>
+<div class="content__client">
+    <ul>
+        <li>{{ client.id }}</li>
+        <li>{{ client.name }}</li>
+        <li>{{ client.lastName }}</li>
+        <li>{{ client.email }}</li>
+        <li><button [routerLink]="['/client', client.key]">Actualizar datos</button></li>
+        <li><button [routerLink]="[]">Ver creditos</button></li>
+    </ul>
+</div>
