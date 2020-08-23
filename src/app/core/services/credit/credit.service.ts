@@ -13,4 +13,12 @@ export class CreditService {
   createCredit(id: string, credit: Credit) {
     return this.http.post(`${this.URL}clients/${id}/credits.json`, credit);
   }
+
+  getCreditsClient(keyClient: string) {
+    return this.http.get<Credit>(`${this.URL}/clients/${keyClient}/credits.json`);
+  }
+
+  getCredit(keyClient: string, keyCredit) {
+    return this.http.get<Credit>(`${this.URL}/clients/${keyClient}/credits/${keyCredit}.json`);
+  }
 }
