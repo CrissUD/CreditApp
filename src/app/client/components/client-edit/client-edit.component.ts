@@ -29,7 +29,6 @@ export class ClientEditComponent implements OnInit {
       this.clientService.getClient(key).subscribe((cli) => {
         cli.key = key;
         this.client = cli;
-        console.log(this.client);
         this.form.patchValue(this.client);
       });
     });

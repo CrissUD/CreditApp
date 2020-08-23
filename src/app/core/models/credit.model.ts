@@ -1,4 +1,5 @@
 export interface Credit {
+  key: string,
   reference: string;
   price: number;
   date: string;

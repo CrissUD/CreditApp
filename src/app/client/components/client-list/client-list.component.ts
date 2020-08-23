@@ -16,14 +16,13 @@ export class ClientListComponent implements OnInit {
     this.fetchClients();
   }
 
-  fetchClients() {
+  fetchClients () {
     this.clientService.getAllClients().subscribe((cli) => {
       this.clients = Object.keys(cli).map((key) => {
         const client: Client = cli[key];
         client.key = key;
         return client;
       });
-      console.log(this.clients);
     });
   }
 }

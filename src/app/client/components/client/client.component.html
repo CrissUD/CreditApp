@@ -5,6 +5,6 @@
         <li>{{ client.lastName }}</li>
         <li>{{ client.email }}</li>
         <li><button [routerLink]="['/client', client.key]">Actualizar datos</button></li>
-        <li><button [routerLink]="[]">Ver creditos</button></li>
+        <li><button [routerLink]="['/credit/creditList', client.key]">Ver créditos</button></li>
     </ul>
 </div>
