@@ -58,7 +58,8 @@ export class ClientEditComponent implements OnInit {
         allowOutsideClick: false
       });
       swal.showLoading();
-      const clientUpdate = this.form.value;
+      let clientUpdate: Client = this.form.value;
+      clientUpdate.credits = this.client.credits;
       this.clientService
         .updateClient(this.client.key, clientUpdate)
         .subscribe((clientUpdated: Client) => {
