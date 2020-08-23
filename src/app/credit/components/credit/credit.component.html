@@ -1,0 +1,8 @@
+<div class="content__credit">
+    <ul>
+        <li>{{ credit.reference }}</li>
+        <li>{{ credit.price }}</li>
+        <li>{{ credit.date }}</li>
+        <li><button [routerLink]="['/credit', client.key, credit.key]">Ver detalles</button></li>
+    </ul>
+</div>

@@ -1,0 +1,29 @@
+<div class="credit-list">
+    <div class="credit-list__header">
+        <div class="header__content">
+            <h2>Revisión general de créditos</h2>
+            <p>Aquí puedes encontrar los datos generales de los créditos.</p>
+        </div>
+        <div class="header__image">
+            <figure><img src="../../../../assets/images/credit.png" alt=""></figure>
+        </div>
+    </div>
+    <div class="credit-list__container container">
+        <h3 *ngIf="client">Lista de créditos de {{client.name}} {{client.lastName}}</h3>
+        <button class="add-credit" routerLink="/credit/register">
+            <figure><img src="../../../../assets/images/addCredit.png" alt=""></figure>
+            Agregar nuevo
+        </button>
+        <div class="credit-list__content">
+            <div class="content__header">
+                <ul>
+                    <li>No Referencia</li>
+                    <li>Valor Crédito</li>
+                    <li>Fecha de Pago</li>
+                    <li>Detalles</li>
+                </ul>
+            </div>
+            <app-credit *ngFor="let credit of credits" [client]="client" [credit]="credit"></app-credit>
+        </div>
+    </div>
+</div>

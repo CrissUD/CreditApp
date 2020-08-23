@@ -1,0 +1,63 @@
+<div class="margin-general">
+    <div class="container">
+        <h2>Datos de crédito</h2>
+        <div class="credit__content">
+            <div class="credit__image">
+                <figure><img src="../../../../assets/images/details.jpg" alt=""></figure>
+            </div>
+            <div class="credit__details">
+                <div class="details-client">
+                    <h3>Datos del Cliente</h3>
+                    <div class="details__part first__part">
+                        <label>
+                            <p>Cedula:</p>
+                            <h5>{{client.id}}</h5>
+                        </label>
+                    </div>
+                    <div class="details__part">
+                        <label>
+                            <p>Nombres:</p>
+                            <h5>{{client.name}}</h5>
+                        </label>
+                        <label>
+                            <p>Apellidos:</p>
+                            <h5>{{client.lastName}}</h5>
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <h3>Datos del Crédito</h3>
+                    <div class="details__part">
+                        <label>
+                            <p>Referencia de pago:</p>
+                            <h5>{{credit.reference}}</h5>
+                        </label>
+                        <label>
+                            <p>Valor de crédito:</p>
+                            <h5>{{credit.price}}</h5>
+                        </label>
+                    </div>
+                    <div class="details__part">
+                        <label>
+                            <p>Fecha a pagar:</p>
+                            <h5>{{credit.date}}</h5>
+                        </label>
+                        <label>
+                            <p>Estado:</p>
+                            <h5 *ngIf="credit.accepted">Crédito Aceptado</h5>
+                            <h5 *ngIf="!credit.accepted">Crédito Desaprobado</h5>
+                        </label>
+                    </div>
+                    <div class="details__part last__part">
+                        <label>
+                            <p>Proceso:</p>
+                            <h5 *ngIf="credit.payed">Crédito pagado y al dia</h5>
+                            <h5 *ngIf="!credit.payed">Crédito sin pagar</h5>
+                        </label>
+                    </div>
+                </div>
+                <button type="submit">Registrar</button>
+            </div>
+        </div>
+    </div>
+</div>
