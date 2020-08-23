@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import swal from 'sweetalert2';
 import { Client } from 'src/app/core/models/client.model';
 import { ClientService } from 'src/app/core/services/client/client.service';
 
@@ -45,14 +45,36 @@ export class ClientEditComponent implements OnInit {
     });
   }
 
+  validationField(field){
+    return this.form.get(field).invalid && this.form.get(field).touched
+  }
+
   updateClient(event: Event) {
-    const clientUpdate = this.form.value;
-    console.log(clientUpdate);
-    this.clientService
-      .updateClient(this.client.key, clientUpdate)
-      .subscribe((clientUpdated) => {
-        alert('el cliente se actualizo');
-        this.router.navigate(['./client']);
+    if (!this.form.invalid) {
+      swal.fire({
+        title: 'Espere',
+        icon: 'info',
+        text: 'Guardando Información',
+        allowOutsideClick: false
       });
+      swal.showLoading();
+      const clientUpdate = this.form.value;
+      this.clientService
+        .updateClient(this.client.key, clientUpdate)
+        .subscribe((clientUpdated: Client) => {
+          swal.fire({
+            title: `Éxito al actualizar al cliente ${clientUpdate.name}.`,
+            icon: 'success',
+            text: 'Información Guardada correctamente'
+          });
+          this.router.navigate(['./client']);
+      });
+    } else {
+      swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Algún dato quedo incompleto'
+      });
+    }
   }
 }

@@ -2,35 +2,55 @@
     <div class="container">
         <h2>Actualización Datos de Cliente</h2>
         <div class="modify__content">
-            <form [formGroup]="form" (ngSubmit)="updateClient($event)">
+            <form autocomplete="off" [formGroup]="form" (ngSubmit)="updateClient($event)">
                 <h3>Datos del cliente</h3>
                 <div class="form__part first__part">
                     <label>
                         <p>Cedula:</p>
-                        <input name="id" type="text" placeholder="Cedula" formControlName="id">
+                        <input 
+                            type="text" placeholder="Cedula" 
+                            formControlName="id" [class.is-invalid]="validationField('id')"
+                        >
+                        <span *ngIf="validationField('id')">Escriba el numero de cedula</span>
                     </label>
                 </div>
                 <div class="form__part">
                     <label>
                         <p>Nombres:</p>
-                        <input type="text" placeholder="Nombre" formControlName="name">
+                        <input 
+                            type="text" placeholder="Nombre" 
+                            formControlName="name" [class.is-invalid]="validationField('name')"
+                        >
+                        <span *ngIf="validationField('name')">Escriba los nombres</span>
                     </label>
                     <label>
                         <p>Apellidos:</p>
-                        <input type="text" placeholder="Apellidos" formControlName="lastName">
+                        <input 
+                            type="text" placeholder="Apellidos" 
+                            formControlName="lastName" [class.is-invalid]="validationField('lastName')"
+                        >
+                        <span *ngIf="validationField('lastName')">Escriba los apellidos</span>
                     </label>
                 </div>
                 <div class="form__part">
                     <label>
                         <p>Email:</p>
-                        <input type="text" placeholder="Correo electronico" formControlName="email">
+                        <input 
+                            type="text" placeholder="Correo electrónico" 
+                            formControlName="email" [class.is-invalid]="validationField('email')"
+                        >
+                        <span *ngIf="validationField('email')">Correo no tiene formato de email</span>
                     </label>
                     <label>
                         <p>Teléfono:</p>
-                        <input type="text" placeholder="Teléfono" formControlName="phone">
+                        <input 
+                            type="text" placeholder="Teléfono" 
+                            formControlName="phone" [class.is-invalid]="validationField('phone')"
+                        >
+                        <span *ngIf="validationField('phone')">Escriba el numero de teléfono</span>
                     </label>
                 </div>
-                <button [disabled]="form.invalid" type="submit">Actualizar</button>
+                <button type="submit">Actualizar</button>
             </form>
             <div class="modify__image">
                 <figure><img src="../../../../assets/images/modify.jpg" alt=""></figure>
