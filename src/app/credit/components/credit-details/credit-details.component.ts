@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import { Location } from '@angular/common';
 import { CreditService } from 'src/app/core/services/credit/credit.service';
 import { ClientService } from 'src/app/core/services/client/client.service';
 import { Client } from 'src/app/core/models/client.model';
@@ -17,15 +18,16 @@ export class CreditDetailsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private location: Location,
     private creditService: CreditService,
     private clientService: ClientService
   ) { }
 
   ngOnInit(): void {
-    this.fetchCredits();
+    this.fetchCredit();
   }
 
-  fetchCredits () {
+  fetchCredit () {
     this.route.params.subscribe((params: Params) => {
       const clientKey = params.idClient;
       const creditKey = params.idCredit;
@@ -41,4 +43,7 @@ export class CreditDetailsComponent implements OnInit {
     });
   }
 
+  goBack(): void {
+    this.location.back();
+  }
 }

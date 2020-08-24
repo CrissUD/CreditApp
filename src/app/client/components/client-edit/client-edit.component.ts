@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Location } from '@angular/common';
 import swal from 'sweetalert2';
 import { Client } from 'src/app/core/models/client.model';
 import { ClientService } from 'src/app/core/services/client/client.service';
@@ -18,6 +19,7 @@ export class ClientEditComponent implements OnInit {
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
     private router: Router,
+    private location: Location,
     private clientService: ClientService
   ) {
     this.buildForm();
@@ -76,5 +78,9 @@ export class ClientEditComponent implements OnInit {
         text: 'Algún dato quedo incompleto'
       });
     }
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 }

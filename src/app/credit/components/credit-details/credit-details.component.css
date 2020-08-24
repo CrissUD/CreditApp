@@ -8,7 +8,7 @@
     color: #1D73B2;
 }
 
-.credit__content, .credit__details .details__part{
+.credit__content, .details__part{
     display: flex;
 }
 
@@ -17,8 +17,6 @@
 }
 
 .credit__details {
-    flex-direction: column;
-    align-items: center;
     color: #7b7b7b;
     font-family: "Lato", sans-serif;
     text-align: center;
@@ -63,3 +61,18 @@
     height: auto;
 }
 
+@media (max-width: 1020px) {
+    .credit__details {
+        width: 90%;
+    }
+    .credit__image{
+        display: none;
+    }
+    .details__part label {
+        width: 80%;
+    }
+    .details__part {
+        flex-direction: column;
+        align-items: center;
+    }
+}

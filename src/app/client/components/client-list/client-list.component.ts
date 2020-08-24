@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Location } from '@angular/common';
 import { Client } from './../../../core/models/client.model';
 import { ClientService } from './../../../core/services/client/client.service';
 
@@ -10,7 +10,7 @@ import { ClientService } from './../../../core/services/client/client.service';
 })
 export class ClientListComponent implements OnInit {
   clients: Client[] = [];
-  constructor(private clientService: ClientService) {}
+  constructor(private location: Location, private clientService: ClientService) {}
 
   ngOnInit(): void {
     this.fetchClients();
@@ -24,5 +24,9 @@ export class ClientListComponent implements OnInit {
         return client;
       });
     });
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 }

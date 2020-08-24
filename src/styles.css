@@ -37,6 +37,18 @@ button {
   transform: scale(1.05);
 }
 
+.b-back {
+  display: block;
+  background: transparent;
+  border: none;
+  float: left;
+}
+
+.b-back img {
+  width: 4rem;
+  height: 4rem;
+}
+
 .logo {
   display: flex;
   align-items: center;

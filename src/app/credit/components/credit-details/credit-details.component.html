@@ -6,7 +6,7 @@
                 <figure><img src="../../../../assets/images/details.jpg" alt=""></figure>
             </div>
             <div class="credit__details">
-                <div class="details-client">
+                <div class="details-client" *ngIf="client">
                     <h3>Datos del Cliente</h3>
                     <div class="details__part first__part">
                         <label>
@@ -25,7 +25,7 @@
                         </label>
                     </div>
                 </div>
-                <div>
+                <div *ngIf="credit">
                     <h3>Datos del Crédito</h3>
                     <div class="details__part">
                         <label>
@@ -56,7 +56,9 @@
                         </label>
                     </div>
                 </div>
-                <button type="submit">Registrar</button>
+                <button class="b-back" (click)="goBack()">
+                    <img src="../../../../assets/images/back.png" alt="">
+                </button>
             </div>
         </div>
     </div>

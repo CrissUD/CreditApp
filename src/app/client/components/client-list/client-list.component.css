@@ -50,7 +50,7 @@
 
 .container {
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 20px auto 80px auto;
 }
 
 .client-list__container h3{
@@ -119,5 +119,8 @@ app-client {
 @media (max-width: 767px) {
     .client-list__header::after, .header__image{
         display: none;
+    }
+    .client-list__header {
+        height: 400px;
     }
 }

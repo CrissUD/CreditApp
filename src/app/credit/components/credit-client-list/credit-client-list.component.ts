@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { CreditService } from 'src/app/core/services/credit/credit.service';
+import { Location } from '@angular/common';
 import { ActivatedRoute, Params } from '@angular/router';
+import { CreditService } from 'src/app/core/services/credit/credit.service';
+import { ClientService } from 'src/app/core/services/client/client.service';
 import { Credit } from 'src/app/core/models/credit.model';
 import { Client } from 'src/app/core/models/client.model';
-import { ClientService } from 'src/app/core/services/client/client.service';
 
 @Component({
   selector: 'app-credit-client-list',
@@ -15,6 +16,7 @@ export class CreditClientListComponent implements OnInit {
   client: Client;
   constructor(
     private route: ActivatedRoute,
+    private location: Location,
     private creditService: CreditService,
     private clientService: ClientService
   ) { }
@@ -38,5 +40,9 @@ export class CreditClientListComponent implements OnInit {
         });
       });
     });
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 }
