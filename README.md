@@ -1,5 +1,22 @@
 # CreditApp
 
+
+# Results
+
+<div align='center'>
+    <img  src='https://i.imgur.com/Zz3W3Wq.png'>
+    <p>home page</p>
+</div>
+
+<div align='center'>
+    <img  src='https://i.imgur.com/BdO5rfQ.png'>
+    <p>List of clients</p>
+</div>
+
+<div align='center'>
+    <img  src='https://i.imgur.com/O0ZjiHy.png'>
+    <p>Register a clients</p>
+</div>
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
 
 ## Development server
