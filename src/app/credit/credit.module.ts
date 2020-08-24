@@ -7,13 +7,16 @@ import { CreditListComponent } from './components/credit-list/credit-list.compon
 import { CreditEditComponent } from './components/credit-edit/credit-edit.component';
 import { CreditComponent } from './components/credit/credit.component';
 import { CreditDetailsComponent } from './components/credit-details/credit-details.component';
+import { CreditRegisterComponent } from './components/credit-register/credit-register.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [CreditClientListComponent, CreditListComponent, CreditEditComponent, CreditComponent, CreditDetailsComponent],
+  declarations: [CreditClientListComponent, CreditListComponent, CreditEditComponent, CreditComponent, CreditDetailsComponent, CreditRegisterComponent],
   imports: [
     CommonModule,
-    CreditRoutingModule
+    CreditRoutingModule, 
+    ReactiveFormsModule
   ]
 })
 export class CreditModule { }

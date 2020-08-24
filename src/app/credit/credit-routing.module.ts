@@ -4,6 +4,7 @@ import { CreditListComponent } from './components/credit-list/credit-list.compon
 import { CreditClientListComponent } from './components/credit-client-list/credit-client-list.component';
 import { CreditEditComponent } from './components/credit-edit/credit-edit.component';
 import { CreditDetailsComponent } from './components/credit-details/credit-details.component';
+import { CreditRegisterComponent } from './components/credit-register/credit-register.component';
 
 
 const routes: Routes = [
@@ -16,8 +17,8 @@ const routes: Routes = [
     component: CreditClientListComponent,
   },
   {
-    path: ':idCredit',
-    component: CreditDetailsComponent,
+    path: 'register/:idClient',
+    component: CreditRegisterComponent,
   },
   {
     path: ':idClient/:idCredit',

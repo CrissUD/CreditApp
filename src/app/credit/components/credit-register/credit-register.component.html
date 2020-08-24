@@ -1,0 +1,63 @@
+<div class="margin-general">
+    <div class="container">
+        <h2>Registro Datos de Crédito</h2>
+        <div class="register__content">
+            <div class="register__image">
+                <figure><img src="../../../../assets/images/creditRegister.jpg" alt=""></figure>
+            </div>
+            <form [formGroup]="form" (ngSubmit)="createCredit($event)">
+                <div class="form-client" *ngIf="client">
+                    <h3>Datos del Cliente</h3>
+                    <div class="form__part first__part">
+                        <label>
+                            <p>Cedula:</p>
+                            <h5>{{client.id}}</h5>
+                        </label>
+                    </div>
+                    <div class="form__part">
+                        <label>
+                            <p>Nombres:</p>
+                            <h5>{{client.name}}</h5>
+                        </label>
+                        <label>
+                            <p>Apellidos:</p>
+                            <h5>{{client.lastName}}</h5>
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <h3>Datos del Crédito</h3>
+                    <div class="form__part">
+                        <label>
+                            <p>Referencia de pago:</p>
+                            <input 
+                                type="text" placeholder="Referencia de pago" 
+                                formControlName="reference" [class.is-invalid]="validationField('reference')"
+                            >
+                            <span *ngIf="validationField('reference')">Escriba la referencia de pago</span>
+                        </label>
+                        <label>
+                            <p>Valor de crédito:</p>
+                            <input 
+                                type="number" placeholder="Valor del crédito" 
+                                formControlName="price" [class.is-invalid]="validationField('price')"
+                            >
+                            <span *ngIf="validationField('price')">Escriba el valor del crédito</span>
+                        </label>
+                    </div>
+                    <div class="form__part last__part">
+                        <label>
+                            <p>Fecha a pagar:</p>
+                            <input type="date" placeholder="Fecha a pagar" formControlName="date">
+                            <span *ngIf="validationField('date')">Escoja la fecha de pago</span>
+                        </label>
+                    </div>
+                </div>
+                <button type="submit">Registrar</button>
+                <button class="b-back" (click)="goBack()">
+                    <img src="../../../../assets/images/back.png" alt="">
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
