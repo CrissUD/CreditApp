@@ -11,68 +11,54 @@
                     <div class="form__part first__part">
                         <label>
                             <p>Cedula:</p>
-                            <input 
-                                type="text" placeholder="Cedula" 
-                                formControlName="id" [class.is-invalid]="validationFieldClient('id')"
-                            >
+                            <input type="text" placeholder="Cedula" formControlName="id"
+                                [class.is-invalid]="validationFieldClient('id')">
                             <span *ngIf="validationFieldClient('id')">Escriba el numero de cedula</span>
                         </label>
                     </div>
                     <div class="form__part">
                         <label>
                             <p>Nombres:</p>
-                            <input 
-                                type="text" placeholder="Nombre" 
-                                formControlName="name" [class.is-invalid]="validationFieldClient('name')"
-                            >
+                            <input type="text" placeholder="Nombre" formControlName="name"
+                                [class.is-invalid]="validationFieldClient('name')">
                             <span *ngIf="validationFieldClient('name')">Escriba los nombres</span>
                         </label>
                         <label>
                             <p>Apellidos:</p>
-                            <input 
-                                type="text" placeholder="Apellidos" 
-                                formControlName="lastName" [class.is-invalid]="validationFieldClient('lastName')"
-                            >
+                            <input type="text" placeholder="Apellidos" formControlName="lastName"
+                                [class.is-invalid]="validationFieldClient('lastName')">
                             <span *ngIf="validationFieldClient('lastName')">Escriba los apellidos</span>
                         </label>
                     </div>
                     <div class="form__part">
                         <label>
                             <p>Email:</p>
-                            <input 
-                                type="text" placeholder="Correo electrónico" 
-                                formControlName="email" [class.is-invalid]="validationFieldClient('email')"
-                            >
+                            <input type="text" placeholder="Correo electrónico" formControlName="email"
+                                [class.is-invalid]="validationFieldClient('email')">
                             <span *ngIf="validationFieldClient('email')">Correo no tiene formato de email</span>
                         </label>
                         <label>
                             <p>Teléfono:</p>
-                            <input 
-                                type="text" placeholder="Teléfono" 
-                                formControlName="phone" [class.is-invalid]="validationFieldClient('phone')"
-                            >
+                            <input type="text" placeholder="Teléfono" formControlName="phone"
+                                [class.is-invalid]="validationFieldClient('phone')">
                             <span *ngIf="validationFieldClient('phone')">Escriba el numero de teléfono</span>
                         </label>
                     </div>
                 </div>
-        
+
                 <form [formGroup]="formCredit">
                     <h3>Datos del Crédito</h3>
                     <div class="form__part">
                         <label>
                             <p>Referencia de pago:</p>
-                            <input 
-                                type="text" placeholder="Referencia de pago" 
-                                formControlName="reference" [class.is-invalid]="validationFieldCredit('reference')"
-                            >
+                            <input type="text" placeholder="Referencia de pago" formControlName="reference"
+                                [class.is-invalid]="validationFieldCredit('reference')">
                             <span *ngIf="validationFieldCredit('reference')">Escriba la referencia de pago</span>
                         </label>
                         <label>
                             <p>Valor de crédito:</p>
-                            <input 
-                                type="number" placeholder="Valor del crédito" 
-                                formControlName="price" [class.is-invalid]="validationFieldCredit('price')"
-                            >
+                            <input type="number" placeholder="Valor del crédito" formControlName="price"
+                                [class.is-invalid]="validationFieldCredit('price')">
                             <span *ngIf="validationFieldCredit('price')">Escriba el valor del crédito</span>
                         </label>
                     </div>
@@ -85,7 +71,7 @@
                     </div>
                 </form>
                 <button type="submit">Registrar</button>
-                <button class="b-back" (click)="goBack()">
+                <button class="b-back" (click)="goBack()" type="button">
                     <img src="../../../../assets/images/back.png" alt="">
                 </button>
             </form>

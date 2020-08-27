@@ -10,13 +10,15 @@ import { CreditDetailsComponent } from './components/credit-details/credit-detai
 import { CreditRegisterComponent } from './components/credit-register/credit-register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
-
 @NgModule({
-  declarations: [CreditClientListComponent, CreditListComponent, CreditEditComponent, CreditComponent, CreditDetailsComponent, CreditRegisterComponent],
-  imports: [
-    CommonModule,
-    CreditRoutingModule, 
-    ReactiveFormsModule
-  ]
+  declarations: [
+    CreditClientListComponent,
+    CreditListComponent,
+    CreditEditComponent,
+    CreditComponent,
+    CreditDetailsComponent,
+    CreditRegisterComponent,
+  ],
+  imports: [CommonModule, CreditRoutingModule, ReactiveFormsModule],
 })
-export class CreditModule { }
+export class CreditModule {}

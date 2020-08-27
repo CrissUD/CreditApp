@@ -46,8 +46,8 @@ export class ClientEditComponent implements OnInit {
     });
   }
 
-  validationField(field){
-    return this.form.get(field).invalid && this.form.get(field).touched
+  validationField(field) {
+    return this.form.get(field).invalid && this.form.get(field).touched;
   }
 
   updateClient(event: Event) {
@@ -56,10 +56,10 @@ export class ClientEditComponent implements OnInit {
         title: 'Espere',
         icon: 'info',
         text: 'Guardando Información',
-        allowOutsideClick: false
+        allowOutsideClick: false,
       });
       swal.showLoading();
-      let clientUpdate: Client = this.form.value;
+      const clientUpdate: Client = this.form.value;
       clientUpdate.credits = this.client.credits;
       this.clientService
         .updateClient(this.client.key, clientUpdate)
@@ -67,15 +67,15 @@ export class ClientEditComponent implements OnInit {
           swal.fire({
             title: `Éxito al actualizar al cliente ${clientUpdate.name}.`,
             icon: 'success',
-            text: 'Información Guardada correctamente'
+            text: 'Información Guardada correctamente',
           });
           this.router.navigate(['./client']);
-      });
+        });
     } else {
       swal.fire({
         icon: 'error',
         title: 'Oops...',
-        text: 'Algún dato quedo incompleto'
+        text: 'Algún dato quedo incompleto',
       });
     }
   }

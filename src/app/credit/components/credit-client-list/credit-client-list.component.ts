@@ -9,7 +9,7 @@ import { Client } from 'src/app/core/models/client.model';
 @Component({
   selector: 'app-credit-client-list',
   templateUrl: './credit-client-list.component.html',
-  styleUrls: ['./credit-client-list.component.css']
+  styleUrls: ['./credit-client-list.component.css'],
 })
 export class CreditClientListComponent implements OnInit {
   credits: Credit[] = [];
@@ -19,21 +19,21 @@ export class CreditClientListComponent implements OnInit {
     private location: Location,
     private creditService: CreditService,
     private clientService: ClientService
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.fetchCredits();
   }
 
-  fetchCredits () {
+  fetchCredits() {
     this.route.params.subscribe((params: Params) => {
       const key = params.idClient;
-      this.clientService.getClient(key).subscribe(client => {
-        this.client = client
+      this.clientService.getClient(key).subscribe((client) => {
+        this.client = client;
         this.client.key = key;
       });
       this.creditService.getCreditsClient(key).subscribe((credits) => {
-        this.credits = Object.keys(credits).map(key => {
+        this.credits = Object.keys(credits).map((key) => {
           const credit: Credit = credits[key];
           credit.key = key;
           return credit;
