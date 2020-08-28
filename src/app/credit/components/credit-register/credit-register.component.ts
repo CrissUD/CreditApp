@@ -58,31 +58,29 @@ export class CreditRegisterComponent implements OnInit {
   }
 
   createCredit(event) {
-    if(event.submitter.className !== "b-back"){    
-      if (!this.form.invalid) {
+    if (!this.form.invalid) {
+      swal.fire({
+        title: 'Espere',
+        icon: 'info',
+        text: 'Guardando Información',
+        allowOutsideClick: false
+      });
+      swal.showLoading();
+      const credit = this.form.value;
+      this.creditService.createCredit(this.client.key, credit).subscribe((newCredit) => {
         swal.fire({
-          title: 'Espere',
-          icon: 'info',
-          text: 'Guardando Información',
-          allowOutsideClick: false
+          title: `Éxito al crear un nuevo crédito al cliente ${this.client.name}.`,
+          icon: 'success',
+          text: 'Información Guardada correctamente'
         });
-        swal.showLoading();
-        const credit = this.form.value;
-        this.creditService.createCredit(this.client.key, credit).subscribe((newCredit) => {
-          swal.fire({
-            title: `Éxito al crear un nuevo crédito al cliente ${this.client.name}.`,
-            icon: 'success',
-            text: 'Información Guardada correctamente'
-          });
-          this.router.navigate([`./credit/creditList/${this.client.key}`]);
-        });
-      } else {
-        swal.fire({
-          icon: 'error',
-          title: 'Oops...',
-          text: 'Algún dato quedo incompleto'
-        });
-      }
+        this.router.navigate([`./credit/creditList/${this.client.key}`]);
+      });
+    } else {
+      swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Algún dato quedo incompleto'
+      });
     }
   }
 
