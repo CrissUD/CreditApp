@@ -5,13 +5,13 @@
             <p>Aquí puedes encontrar los datos generales de todos nuestros clientes.</p>
         </div>
         <div class="header__image">
-            <figure><img src="../../../../assets/images/client.png" alt=""></figure>
+            <figure><img src="assets/images/client.png" alt=""></figure>
         </div>
     </div>
     <div class="client-list__container container">
         <h3>Lista de clientes</h3>
         <button class="add-client" routerLink="/client/register">
-            <figure><img src="../../../../assets/images/addClient.png" alt=""></figure>
+            <figure><img src="assets/images/addClient.png" alt=""></figure>
             Agregar nuevo
         </button>
         <div class="client-list__content">
@@ -28,7 +28,7 @@
             <app-client *ngFor="let client of clients" [client]="client"></app-client>
         </div>
         <button class="b-back" (click)="goBack()">
-            <img src="../../../../assets/images/back.png" alt="">
+            <img src="assets/images/back.png" alt="">
         </button>
     </div>
 </div>

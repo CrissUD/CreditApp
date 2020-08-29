@@ -3,7 +3,7 @@
         <h2>Registro Datos de Crédito</h2>
         <div class="register__content">
             <div class="register__image">
-                <figure><img src="../../../../assets/images/creditRegister.jpg" alt=""></figure>
+                <figure><img src="assets/images/creditRegister.jpg" alt=""></figure>
             </div>
             <form [formGroup]="form" (ngSubmit)="createCredit($event)">
                 <div class="form-client" *ngIf="client">
@@ -51,7 +51,7 @@
                 </div>
                 <button type="submit">Registrar</button>
                 <button class="b-back" (click)="goBack()" type="button">
-                    <img src="../../../../assets/images/back.png" alt="">
+                    <img src="assets/images/back.png" alt="">
                 </button>
             </form>
         </div>
