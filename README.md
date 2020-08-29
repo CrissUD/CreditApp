@@ -1,5 +1,6 @@
 # CreditApp
 
+Para revisar la página web puede entrar al [siguiente link](https://crissud.github.io/CreditApp/).
 
 # Results
 
@@ -29,7 +30,13 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Commands to build and deploy
+```javascript
+ng build --prod --base-href "https://crissud.github.io/CreditApp/"
+```
+```javascript
+npx angular-cli-ghpages --dir=dist/CreditApp
+```
 
 ## Running unit tests
 
