@@ -30,18 +30,14 @@
                     <div class="form__part">
                         <label>
                             <p>Referencia de pago:</p>
-                            <input 
-                                type="text" placeholder="Referencia de pago" 
-                                formControlName="reference" [class.is-invalid]="validationField('reference')"
-                            >
+                            <input type="text" placeholder="Referencia de pago" formControlName="reference"
+                                [class.is-invalid]="validationField('reference')">
                             <span *ngIf="validationField('reference')">Escriba la referencia de pago</span>
                         </label>
                         <label>
                             <p>Valor de crédito:</p>
-                            <input 
-                                type="number" placeholder="Valor del crédito" 
-                                formControlName="price" [class.is-invalid]="validationField('price')"
-                            >
+                            <input type="number" placeholder="Valor del crédito" formControlName="price"
+                                [class.is-invalid]="validationField('price')">
                             <span *ngIf="validationField('price')">Escriba el valor del crédito</span>
                         </label>
                     </div>
@@ -54,7 +50,7 @@
                     </div>
                 </div>
                 <button type="submit">Registrar</button>
-                <button type="button" class="b-back" (click)="goBack()">
+                <button class="b-back" (click)="goBack()" type="button">
                     <img src="../../../../assets/images/back.png" alt="">
                 </button>
             </form>

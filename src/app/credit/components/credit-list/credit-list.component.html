@@ -1,34 +1,3 @@
-<div class="credit-list">
-    <div class="credit-list__header">
-        <div class="header__content">
-            <h2>Revisión general de créditos</h2>
-            <p>Aquí puedes encontrar los datos generales de los créditos.</p>
-        </div>
-        <div class="header__image">
-            <figure><img src="../../../../assets/images/credit.png" alt=""></figure>
-        </div>
-    </div>
-    <div class="credit-list__container container">
-        <h3>Lista de todos los créditos.</h3>
-        <div class="credit-list__content">
-            <div class="content__header">
-                <ul>
-                    <li>No Referencia</li>
-                    <li>Valor Crédito</li>
-                    <li>Fecha de Pago</li>
-                    <li>Detalles</li>
-                </ul>
-            </div>
-            <div class="client-Credit-list" *ngFor="let client of clients">
-                <h4>{{client.name}} {{client.lastName}}</h4>
-                <p *ngIf="!client.credits">El cliente no presenta créditos actualmente.</p>
-                <div *ngIf="client.credits">
-                    <app-credit *ngFor="let credit of client.credits" [client]="client" [credit]="credit"></app-credit>
-                </div>
-            </div>
-        </div>
-        <button class="b-back" (click)="goBack()">
-            <img src="../../../../assets/images/back.png" alt="">
-        </button>
-    </div>
+<div class="margin-general">
+    <p>credit-list works!</p>
 </div>

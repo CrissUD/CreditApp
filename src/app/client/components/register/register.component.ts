@@ -48,12 +48,16 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-  validationFieldClient(field){
-    return this.formClient.get(field).invalid && this.formClient.get(field).touched
+  validationFieldClient(field) {
+    return (
+      this.formClient.get(field).invalid && this.formClient.get(field).touched
+    );
   }
 
-  validationFieldCredit(field){
-    return this.formCredit.get(field).invalid && this.formCredit.get(field).touched
+  validationFieldCredit(field) {
+    return (
+      this.formCredit.get(field).invalid && this.formCredit.get(field).touched
+    );
   }
 
   createClient(event) {
@@ -62,7 +66,7 @@ export class RegisterComponent implements OnInit {
         title: 'Espere',
         icon: 'info',
         text: 'Guardando Información',
-        allowOutsideClick: false
+        allowOutsideClick: false,
       });
       swal.showLoading();
       const client = this.formClient.value;
@@ -70,20 +74,22 @@ export class RegisterComponent implements OnInit {
       this.clientService.createClient(client).subscribe((newClient) => {
         const newKey = Object.values(newClient)[0];
         console.log(newKey);
-        this.creditService.createCredit(newKey, credit).subscribe((newCredit) => {
-          swal.fire({
-            title: `Éxito al crear al cliente ${client.name} y su respectivo crédito.`,
-            icon: 'success',
-            text: 'Información Guardada correctamente'
+        this.creditService
+          .createCredit(newKey, credit)
+          .subscribe((newCredit) => {
+            swal.fire({
+              title: `Éxito al crear al cliente ${client.name} y su respectivo crédito.`,
+              icon: 'success',
+              text: 'Información Guardada correctamente',
+            });
+            this.router.navigate(['./client']);
           });
-          this.router.navigate(['./client']);
-        });
       });
     } else {
       swal.fire({
         icon: 'error',
         title: 'Oops...',
-        text: 'Algún dato quedo incompleto'
+        text: 'Algún dato quedo incompleto',
       });
     }
   }

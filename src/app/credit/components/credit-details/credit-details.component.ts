@@ -9,10 +9,9 @@ import { Credit } from 'src/app/core/models/credit.model';
 @Component({
   selector: 'app-credit-details',
   templateUrl: './credit-details.component.html',
-  styleUrls: ['./credit-details.component.css']
+  styleUrls: ['./credit-details.component.css'],
 })
 export class CreditDetailsComponent implements OnInit {
-
   credit: Credit;
   client: Client;
 
@@ -21,22 +20,22 @@ export class CreditDetailsComponent implements OnInit {
     private location: Location,
     private creditService: CreditService,
     private clientService: ClientService
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.fetchCredit();
   }
 
-  fetchCredit () {
+  fetchCredit() {
     this.route.params.subscribe((params: Params) => {
       const clientKey = params.idClient;
       const creditKey = params.idCredit;
-      this.clientService.getClient(clientKey).subscribe(client => {
-        this.client = client
+      this.clientService.getClient(clientKey).subscribe((client) => {
+        this.client = client;
         this.client.key = clientKey;
       });
 
-      this.creditService.getCredit(clientKey, creditKey).subscribe(credit => {
+      this.creditService.getCredit(clientKey, creditKey).subscribe((credit) => {
         this.credit = credit;
         this.credit.key = creditKey;
       });

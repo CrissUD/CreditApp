@@ -10,13 +10,16 @@ import { ClientService } from './../../../core/services/client/client.service';
 })
 export class ClientListComponent implements OnInit {
   clients: Client[] = [];
-  constructor(private location: Location, private clientService: ClientService) {}
+  constructor(
+    private location: Location,
+    private clientService: ClientService
+  ) {}
 
   ngOnInit(): void {
     this.fetchClients();
   }
 
-  fetchClients () {
+  fetchClients() {
     this.clientService.getAllClients().subscribe((cli) => {
       this.clients = Object.keys(cli).map((key) => {
         const client: Client = cli[key];
