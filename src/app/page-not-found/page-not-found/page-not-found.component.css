@@ -1,0 +1,44 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  background-color: #072146;
+  /* background: linear-gradient(#072146, #ffffff); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container__img {
+  cursor: pointer;
+  width: 50vw;
+}
+
+.container__info {
+  font-family: "Lato", sans-serif;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+/* ANIMACIÓN */
+
+.animated {
+  animation-duration: 2.5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.pulse {
+  animation-name: pulse;
+  animation-duration: 1s;
+}
